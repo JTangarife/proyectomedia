@@ -78,9 +78,9 @@ public class contactenos extends HttpServlet {
             ResultSet resultado = ps.executeQuery();
             Contactenos c;
             while(resultado.next()){
-                String nombre = resultado.getString("nombre");
-                String telefono = resultado.getString("telefono");
-                String direccion = resultado.getString("direccion");
+                String nombre = resultado.getString("Nombre");
+                String telefono = resultado.getString("Telefono");
+                String direccion = resultado.getString("Direccion");
                 c = new Contactenos(nombre, telefono, direccion);
                 ListaDesa.add(c);
             }

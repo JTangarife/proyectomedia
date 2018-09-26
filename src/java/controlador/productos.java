@@ -83,9 +83,9 @@ public class productos extends HttpServlet {
             ResultSet resultado = ps.executeQuery();
             Producto p;
             while(resultado.next()) {
-                String nombre = resultado.getString("nombre");
-                String  precio = resultado.getString("precio");
-                String  descripcion = resultado.getString("descripcion");
+                String nombre = resultado.getString("Nombre");
+                String  precio = resultado.getString("Precio");
+                String  descripcion = resultado.getString("Descripcion");
                 p = new Producto(nombre, precio, descripcion);
                 listaProd.add(p);
             }

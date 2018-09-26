@@ -17,19 +17,19 @@
         <%
         List<Contactenos> listaContactenos = (List<Contactenos>) request.getAttribute("ListaDesa");
         %>
-        <h1>CONTÁCTENOS</h1>
+        <h1>Contáctenos</h1>
         <form name="contactenos" action="contactenos" method="POST">
-            <span>nombre</span><input type="text" name="nombre"/>
-            <span>telefono</span><input type="text" name="telefono"/>
-            <span>direccion</span><input type="text" name="direccion"/>
+            <span>Nombre</span><input type="text" name="nombre"/>
+            <span>Teléfono</span><input type="text" name="telefono"/>
+            <span>Dirección</span><input type="text" name="direccion"/>
                 
             <button type="submit">guardar información</button>
         </form>
         <table>
             <tr>
-                <th>nombre</th>
-                <th>telefono</th>
-                <th>direccion</th>
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>Direccion</th>
             </tr>
             <% 
                 Contactenos c;
