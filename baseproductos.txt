@@ -1,0 +1,31 @@
+BASE DE DATOS PRODUCTOS
+
+CREATE TABLE `productos`.`listado` (
+  `idlistado` INT NOT NULL AUTO_INCREMENT,
+  `producto` VARCHAR(45) NULL,
+  `precio` INT(10) NULL,
+  `descripcion` VARCHAR(4445) NULL,
+  PRIMARY KEY (`idlistado`));
+
+
+
+DATOS DE LA TABLA "LISTADO"
+
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Gaseosas', '1300', 'Bebida gaseosa refrescante');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Papitas', '1500', 'Papas fritas ern bolsitas');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Empanadas', '600', 'Masa rellena de arroz, carne o papa');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Cheetos', '1100', 'Cheetos c:');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Arepa con salchicón', '1200', 'Arepa frita con salchichón y salsa');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Palo de queso', '1200', 'Palo relleno de queso');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Bolis', '100', 'Bebida congelada en bolsita');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Paletas', '600', 'Paleta de chocolate o fresa');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Bombones', '300', 'Bombón c:');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Gomitas', '100', 'Gomitas Grisly c:');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Maduritos', '700', 'Plátano maduro frito más o menos saladito');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Platanitos', '700', 'Plátano verde frito y salado');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Vasos desechables', '100', 'Vasos desechables');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Cucharas desechables', '100', 'Cucharas desechables');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Platos desechables', '100', 'Platos desechables');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Palomitas', '1200', 'Palomitas de maíz empaquetadas');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Choclitos', '700', 'Choclitos salados');
+INSERT INTO `productos`.`listado` (`nombre`, `precio`, `descripcion`) VALUES ('Maní', '800', 'Maní c:');
