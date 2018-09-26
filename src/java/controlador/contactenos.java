@@ -79,8 +79,8 @@ public class contactenos extends HttpServlet {
             Contactenos c;
             while(resultado.next()){
                 String nombre = resultado.getString("Nombre");
-                String telefono = resultado.getString("Telefono");
-                String direccion = resultado.getString("Direccion");
+                String telefono = resultado.getString("Teléfono");
+                String direccion = resultado.getString("Dirección");
                 c = new Contactenos(nombre, telefono, direccion);
                 ListaDesa.add(c);
             }
