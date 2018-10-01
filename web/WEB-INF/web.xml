@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>Inicio</servlet-name>
-        <servlet-class>controlador.Inicio</servlet-class>
+        <servlet-name>productos</servlet-name>
+        <servlet-class>controlador.ProductosController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>deudas</servlet-name>
+        <servlet-class>controlador.DeudasController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>contactenos</servlet-name>
+        <servlet-class>controlador.ContactenosController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>inventario</servlet-name>
+        <servlet-class>controlador.inventario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>usuarios</servlet-name>
+        <servlet-class>controlador.usuarios</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>publicidad</servlet-name>
+        <servlet-class>controlador.publicidad</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Inicio</servlet-name>
-        <url-pattern>/Inicio</url-pattern>
+        <servlet-name>productos</servlet-name>
+        <url-pattern>/productos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>deudas</servlet-name>
+        <url-pattern>/deudas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>contactenos</servlet-name>
+        <url-pattern>/contactenos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inventario</servlet-name>
+        <url-pattern>/inventario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>usuarios</servlet-name>
+        <url-pattern>/usuarios</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>publicidad</servlet-name>
+        <url-pattern>/publicidad</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

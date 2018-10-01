@@ -28,8 +28,8 @@
         <table>
             <tr>
                 <th>Nombre</th>
-                <th>Telefono</th>
-                <th>Direccion</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
             </tr>
             <% 
                 Contactenos c;

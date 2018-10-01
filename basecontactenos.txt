@@ -1,0 +1,15 @@
+CREATE DATABASE contactenos;
+
+CREATE TABLE `contactenos`.`desarrolladores` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `telefono` INT NOT NULL,
+  `direccion` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO `contactenos`.`desarrolladores` (`id`, `nombre`, `telefono`, `direccion`) VALUES ('1', 'Juan David Tangarife Muñoz', '1515551', '4adf445a');
+INSERT INTO `contactenos`.`desarrolladores` (`id`, `nombre`, `telefono`, `direccion`) VALUES ('2', 'Miguel Angel Molina Vélez', '5835087', 'asd5as5d5a');
+INSERT INTO `contactenos`.`desarrolladores` (`id`, `nombre`, `telefono`, `direccion`) VALUES ('3', 'Juan Diego Yepes Yepes', '78555555552', 'asda4sd45as54d');
+INSERT INTO `contactenos`.`desarrolladores` (`id`, `nombre`, `telefono`, `direccion`) VALUES ('4', 'Oscar Stiven Suarez Moreno', '8514', 'a7sd4as5d8');
+INSERT INTO `contactenos`.`desarrolladores` (`id`, `nombre`, `telefono`, `direccion`) VALUES ('5', 'Nicolás Betancur Ruiz', '745215', 'a4sd4asd4');
+INSERT INTO `contactenos`.`desarrolladores` (`id`, `nombre`, `telefono`, `direccion`) VALUES ('6', 'Jhonier Felipe Diossa Quiceno', '7788222', '5f5f5as2d2');

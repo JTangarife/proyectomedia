@@ -29,7 +29,7 @@ import modelos.Producto;
  * @author Usuario
  */
 @WebServlet(name = "productos", urlPatterns = {"/productos"})
-public class productos extends HttpServlet {
+public class ProductosController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -49,7 +49,7 @@ public class productos extends HttpServlet {
         String nombre = request.getParameter("nombre");
         
         if(nombre != null && !nombre.equals("")) {
-            String precio = request.getParameter("precio");
+            int precio = Integer.parseInt(request.getParameter("precio"));
             String descripcion = request.getParameter("descripcion");
             int tipocomida = Integer.parseInt(request.getParameter("tipocomida"));
             guardarProducto(nombre, precio, descripcion, tipocomida);
@@ -57,20 +57,20 @@ public class productos extends HttpServlet {
         
         rd.forward(request, response);
     }
-    private void guardarProducto(String nombre, String precio, String descripcion, int tipocomida) {
+    private void guardarProducto(String nombre, int precio, String descripcion, int tipocomida) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/productos", "root", "");
             PreparedStatement ps = conexion.prepareStatement("INSERT INTO `productos`.`listado` (`nombre`, `precio`, descripcion, tipocomida) VALUES (?, ?, ?, ?)");
             ps.setString(1, nombre);
-            ps.setString(2, precio);
+            ps.setInt(2, precio);
             ps.setString(3, descripcion);
             ps.setInt(4, tipocomida);
             ps.execute();
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(productos.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ProductosController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(productos.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ProductosController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -83,16 +83,16 @@ public class productos extends HttpServlet {
             ResultSet resultado = ps.executeQuery();
             Producto p;
             while(resultado.next()) {
-                String nombre = resultado.getString("Nombre");
-                String  precio = resultado.getString("Precio");
-                String  descripcion = resultado.getString("Descripcion");
+                String nombre = resultado.getString("nombre");
+                int  precio = resultado.getInt("precio");
+                String  descripcion = resultado.getString("descripcion");
                 p = new Producto(nombre, precio, descripcion);
                 listaProd.add(p);
             }
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(productos.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ProductosController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(productos.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ProductosController.class.getName()).log(Level.SEVERE, null, ex);
         }
         return listaProd;
     }

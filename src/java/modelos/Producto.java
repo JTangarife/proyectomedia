@@ -11,10 +11,10 @@ package modelos;
 public class Producto {
     
     public String nombre;
-    public String precio;
+    public int precio;
     public String descripcion;
 
-    public Producto(String nombre, String precio, String descripcion) {
+    public Producto(String nombre, int precio, String descripcion) {
         this.nombre = nombre;
         this.precio = precio;
         this.descripcion = descripcion;

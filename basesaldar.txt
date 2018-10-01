@@ -1,0 +1,14 @@
+CREATE DATABASE saldar;
+
+CREATE TABLE `saldar`.`deudas` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `idusuario` INT NOT NULL,
+  `valor_deudas` INT NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+INSERT INTO `saldar`.`deudas` (`idusuario`, `valor_deudas`) VALUES ('1', '5000');
+INSERT INTO `saldar`.`deudas` (`idusuario`, `valor_deudas`) VALUES ('2', '1800');
+INSERT INTO `saldar`.`deudas` (`idusuario`, `valor_deudas`) VALUES ('3', '2600');
+INSERT INTO `saldar`.`deudas` (`idusuario`, `valor_deudas`) VALUES ('4', '9200');
+INSERT INTO `saldar`.`deudas` (`idusuario`, `valor_deudas`) VALUES ('5', '1100');

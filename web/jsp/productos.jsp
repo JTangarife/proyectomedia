@@ -10,6 +10,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Productos tienda</title>
+        <style>
+            h1{
+                color: blue;
+            }  
+            
+        </style>
     </head>
     <body>
         <%@page import="java.util.List" %>
@@ -19,13 +25,13 @@
         %>
         <h1>Ingreso de productos a la tienda</h1>
         <form name="productos" action="productos" method="POST">
-            <span>nombre</span><input type="text" name="nombre" />
-            <span>precio</span><input type="text" name="precio" />
-            <span>descripción</span><input type="text" name="descripcion" />
+            <span>Nombre</span><input type="text" name="nombre" />
+            <span>Precio</span><input type="number" name="precio" />
+            <span>Descripción</span><input type="text" name="descripcion" />
             <select name="tipocomida">
                 <option value="1">Fritos</option>              
                 <option value="2">Mecato</option>
-                <option value="3">Bebida</option>
+                <option value="3">Bebidas</option>
                 <option value="4">Desechables</option>
                 
             </select>
@@ -33,11 +39,11 @@
             <button type="submit">Guardar productos</button>
         </form>
         
-        <table>
+        <table border="1">
             <tr>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Descripcion</th>
+                <th>nombre</th>
+                <th>precio</th>
+                <th>descripcion</th>
             </tr>
             <%
             Producto p;

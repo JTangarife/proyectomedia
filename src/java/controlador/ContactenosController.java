@@ -28,7 +28,7 @@ import modelos.Contactenos;
  * @author Usuario
  */
 @WebServlet(name = "contactenos", urlPatterns = {"/contactenos"})
-public class contactenos extends HttpServlet {
+public class ContactenosController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -63,9 +63,9 @@ public class contactenos extends HttpServlet {
             ps.setString(2, telefono);
             ps.setString(3, direccion);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(contactenos.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ContactenosController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(contactenos.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ContactenosController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -86,9 +86,9 @@ public class contactenos extends HttpServlet {
             }
         
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(contactenos.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ContactenosController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex){
-            Logger.getLogger(contactenos.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ContactenosController.class.getName()).log(Level.SEVERE, null, ex);
         }
         return ListaDesa;
     }
